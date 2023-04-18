@@ -1,0 +1,9 @@
+.othent-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  background-color: #ccc;
+  border-radius: 50%;
+}
