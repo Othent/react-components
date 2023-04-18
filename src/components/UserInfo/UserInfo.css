@@ -1,0 +1,32 @@
+.othent-user-info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  /* margin-bottom: 1em; */
+}
+
+.othent-user-info-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+.othent-user-info-details-name {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: start;
+}
+
+.othent-user-info-details-email {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: start;
+  font-weight: normal;
+  color: #888;
+  font-size: small;
+}
