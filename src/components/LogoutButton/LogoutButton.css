@@ -1,0 +1,13 @@
+.othent-button-logout {
+  border: 1px solid #f44336;
+  background-color: transparent;
+  width: 100%;
+  color: #f44336;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.othent-button-logout:hover {
+  background-color: #f4433611;
+}
