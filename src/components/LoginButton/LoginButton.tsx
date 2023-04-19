@@ -11,7 +11,7 @@ export interface LoginButtonProps
   onLogin?: (userData: LogInReturnProps) => void;
 }
 
-const Button = (props: LoginButtonProps) => {
+const LoginButton = (props: LoginButtonProps) => {
   const { children, className = "", onLogin } = props;
 
   const [clicked, setClicked] = useState(false);
@@ -49,4 +49,4 @@ const Button = (props: LoginButtonProps) => {
   );
 };
 
-export default Button;
+export default LoginButton;

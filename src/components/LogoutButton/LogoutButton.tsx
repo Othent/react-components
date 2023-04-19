@@ -10,7 +10,7 @@ export interface LogoutButtonProps
   onLogout?: (logoutResponse: LogOutReturnProps) => void;
 }
 
-const Button = (props: LogoutButtonProps) => {
+const LogoutButton = (props: LogoutButtonProps) => {
   const { children = "Log Out", className = "", onLogout } = props;
 
   const [clicked, setClicked] = useState(false);
@@ -40,4 +40,4 @@ const Button = (props: LogoutButtonProps) => {
   );
 };
 
-export default Button;
+export default LogoutButton;
