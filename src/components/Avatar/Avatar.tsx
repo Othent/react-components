@@ -11,23 +11,19 @@ const Avatar = (props: AvatarProps) => {
   const { className = "", userName = "", imgSrc = "" } = props;
   const [error, setError] = useState(false);
 
-  const avatarClassName = className
-    ? `othent-avatar ${className}`
-    : "othent-avatar";
-
   return (
     <>
       {!error && imgSrc ? (
         <img
           src={imgSrc}
           alt={`${userName}'s avatar`}
-          className={avatarClassName}
+          className={`othent-avatar ${className}`}
           {...props}
           referrerPolicy="no-referrer"
           onError={() => setError(true)}
         />
       ) : (
-        <div className={avatarClassName} {...props}>
+        <div className={`othent-avatar ${className}`} {...props}>
           {userName ? userName.charAt(0).toUpperCase() : <>&nbsp;</>}
         </div>
       )}

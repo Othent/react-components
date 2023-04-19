@@ -30,8 +30,6 @@ export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   location?: ModalLocation;
 }
 
-const mainClassName = "othent-modal";
-
 const Modal = (props: ModalProps) => {
   const {
     className = "",
@@ -60,14 +58,14 @@ const Modal = (props: ModalProps) => {
 
   return (
     <div
-      className={`othent-login-button ${mainClassName} ${className}`}
+      className={`othent-login-button othent-modal ${className}`}
       onClick={() => setShowModal(!showModal)}
       {...props}
     >
       {parent}
       {showModal && (
         <div
-          className={`${mainClassName}-children ${mainClassName}-children-${LOCATIONS[location]}`}
+          className={`othent-modal-children othent-modal-children-${LOCATIONS[location]}`}
         >
           {children}
         </div>
