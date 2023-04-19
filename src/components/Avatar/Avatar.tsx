@@ -1,7 +1,8 @@
-import React, { HTMLProps, useState } from "react";
+import React, { useState } from "react";
 import "./Avatar.css";
 
-export interface AvatarProps extends HTMLProps<HTMLImageElement> {
+export interface AvatarProps
+  extends React.ButtonHTMLAttributes<HTMLImageElement> {
   className?: string;
   userName?: string;
   imgSrc?: string;

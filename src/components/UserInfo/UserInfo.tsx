@@ -1,8 +1,9 @@
-import React, { HTMLProps, useState } from "react";
+import React from "react";
 import "./UserInfo.css";
 import { Avatar, UserData } from "..";
 
-export interface UserInfoProps extends HTMLProps<HTMLDivElement> {
+export interface UserInfoProps
+  extends React.ButtonHTMLAttributes<HTMLDivElement> {
   className?: string;
   userData?: UserData | null;
 }

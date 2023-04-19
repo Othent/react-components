@@ -1,7 +1,8 @@
-import React, { HTMLProps } from "react";
+import React from "react";
 import "./Button.css";
 
-export interface ButtonProps extends HTMLProps<HTMLDivElement> {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
 }
