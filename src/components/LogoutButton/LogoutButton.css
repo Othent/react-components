@@ -18,6 +18,6 @@
 }
 
 .othent-button-logout:disabled:hover {
-  background-color: #ccc1;
+  background-color: transparent;
   cursor: not-allowed;
 }
