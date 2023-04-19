@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./LogoutButton.css";
 import othent from "othent/dist/lib";
 
-export interface ButtonProps
+export interface LogoutButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode | string;
   className?: string;
   onLogout?: () => void;
 }
 
-const Button = (props: ButtonProps) => {
+const Button = (props: LogoutButtonProps) => {
   const { children = "Log Out", className = "", onLogout } = props;
 
   const [clicked, setClicked] = useState(false);
