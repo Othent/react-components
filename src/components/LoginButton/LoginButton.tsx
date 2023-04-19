@@ -20,7 +20,6 @@ const Button = (props: LoginButtonProps) => {
     setClicked(true);
     try {
       const loginResponse = await othent.logIn();
-      console.log(loginResponse);
       if (onLogin) onLogin(loginResponse);
     } catch (e) {
       console.log(`othent.login() failed:`);
