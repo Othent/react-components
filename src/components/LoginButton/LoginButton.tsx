@@ -36,7 +36,7 @@ const Button = (props: LoginButtonProps) => {
       onClick={() => void login()}
       {...props}
     >
-      <img src={logo} alt="logo"></img>
+      <img src={logo} alt="logo" className="othent-button-login-logo"></img>
       {children ? (
         children
       ) : (

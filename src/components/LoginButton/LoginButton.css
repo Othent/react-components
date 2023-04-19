@@ -1,3 +1,55 @@
-.button-custom {
-  font-size: 60px;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap");
+
+.othent-button-login {
+  appearance: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: black;
+  width: fit-content;
+  height: 3em;
+  padding: 0.25em 0.75em;
+  border: 0;
+  border-radius: 0.375em;
+  cursor: pointer;
+  filter: drop-shadow(1.5px 0.75px 0.125rem #0008);
+  font-weight: 700;
+}
+
+button.othent-button-login {
+  box-sizing: content-box;
+}
+
+.othent-button-login:hover {
+  filter: drop-shadow(1.5px 0.75px 0.125rem #000b);
+}
+
+.othent-button-login:active {
+  filter: drop-shadow(1px 0.5px 0.0625rem #000c);
+}
+
+.othent-button-login:disabled {
+  cursor: wait;
+  filter: drop-shadow(1.5px 0.75px 0.125rem #0008);
+  cursor: not-allowed;
+}
+
+.othent-button-login:disabled:hover {
+  filter: drop-shadow(1.5px 0.75px 0.125rem #0008);
+}
+
+.othent-button-login:disabled:active {
+  filter: drop-shadow(1.5px 0.75px 0.125rem #0008);
+}
+
+.othent-button-login-brandname {
+  color: #2375ef;
+}
+
+.othent-button-login .othent-button-login-logo {
+  margin-right: 0.5em;
+  max-height: 100%;
 }
