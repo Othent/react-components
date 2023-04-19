@@ -1,0 +1,71 @@
+@import url("../LoginButton/LoginButton.css");
+
+.othent-modal {
+  padding: 0;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+
+.othent-modal-children {
+  position: absolute;
+  padding: 1.5em;
+  background-color: #fff;
+  filter: drop-shadow(1.5px 0.75px 0.125rem #0004);
+  border-radius: 0.5em;
+}
+
+.othent-modal-children-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.othent-modal-children-top {
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+.othent-modal-children-top-right {
+  top: -20%;
+  left: 120%;
+  transform: translate(0%, -100%);
+}
+
+.othent-modal-children-top-left {
+  top: -20%;
+  left: -20%;
+  transform: translate(-100%, -100%);
+}
+
+.othent-modal-children-right {
+  top: 50%;
+  left: 120%;
+  transform: translate(0%, -50%);
+}
+
+.othent-modal-children-left {
+  top: 50%;
+  left: -20%;
+  transform: translate(-100%, -50%);
+}
+
+.othent-modal-children-bottom {
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.othent-modal-children-bottom-right {
+  top: 120%;
+  left: 120%;
+  transform: translate(0%, 0%);
+}
+
+.othent-modal-children-bottom-left {
+  top: 120%;
+  left: -20%;
+  transform: translate(-100%, 0%);
+}
