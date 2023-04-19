@@ -11,3 +11,13 @@
 .othent-button-logout:hover {
   background-color: #f4433611;
 }
+
+.othent-button-logout:disabled {
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.othent-button-logout:disabled:hover {
+  background-color: #ccc1;
+  cursor: not-allowed;
+}
