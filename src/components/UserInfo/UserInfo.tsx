@@ -1,11 +1,12 @@
 import React from "react";
 import "./UserInfo.css";
-import { Avatar, UserData } from "..";
+import { Avatar } from "..";
+import { LogInReturnProps } from "othent/dist/types";
 
 export interface UserInfoProps
   extends React.ButtonHTMLAttributes<HTMLDivElement> {
   className?: string;
-  userData?: UserData | null;
+  userData?: LogInReturnProps | null;
 }
 
 const mainClassName = "othent-user-info";
