@@ -28,7 +28,7 @@ export default [
         plugins: [
             json(),
             PeerDepsExternalPlugin(),
-            resolve(),
+            resolve({ preferBuiltins: true }),
             commonjs(),
             svg(),
             typescript({ tsconfig: "./tsconfig.json" }),
@@ -40,6 +40,6 @@ export default [
         input: "dist/esm/types/index.d.ts",
         output: [{ file: "dist/index.d.ts", format: "esm" }],
         plugins: [dts()],
-        external: [/\.css$/],
+        external: ["storybook/**", "react-dom", "**/*.css", /\.css$/,],
     },
 ];
