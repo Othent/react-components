@@ -3,8 +3,7 @@ import "./UserInfo.css";
 import { Avatar } from "..";
 import { LogInReturnProps } from "othent/dist/types";
 
-export interface UserInfoProps
-  extends React.ButtonHTMLAttributes<HTMLDivElement> {
+export interface UserInfoProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   userData?: LogInReturnProps | null;
 }

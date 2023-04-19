@@ -12,7 +12,7 @@ export interface LoginButtonProps
 }
 
 const Button = (props: LoginButtonProps) => {
-  const { children = <></>, className = "", onLogin } = props;
+  const { children, className = "", onLogin } = props;
 
   const [clicked, setClicked] = useState(false);
 
