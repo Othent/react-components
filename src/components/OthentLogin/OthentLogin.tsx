@@ -9,13 +9,15 @@ import LoginButton from "../LoginButton";
 import LogoutButton from "../LogoutButton";
 import UserInfo from "../UserInfo";
 import Modal from "../Modal";
+import { ModalLocation } from "../Modal/Modal";
 
 export interface OthentLoginProps {
   children?: React.ReactNode;
+  location?: ModalLocation;
 }
 
 const OthentLogin = (props: OthentLoginProps) => {
-  const { children } = props;
+  const { children, location = ModalLocation.bottom } = props;
 
   const [userData, setUserData] = useState<LogInReturnProps | null>(null);
 
@@ -33,6 +35,7 @@ const OthentLogin = (props: OthentLoginProps) => {
         <LoginButton onLogin={onLogin} />
       ) : (
         <Modal
+          location={location}
           parent={
             children ? (
               children

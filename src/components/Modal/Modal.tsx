@@ -12,7 +12,7 @@ const LOCATIONS = [
   "bottom-left",
 ];
 
-enum ModalLocation {
+export enum ModalLocation {
   "top",
   "right",
   "bottom",
