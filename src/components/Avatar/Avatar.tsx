@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import "./Avatar.css";
 
-export interface AvatarProps extends React.HTMLAttributes<HTMLImageElement> {
-  className?: string;
+export interface AvatarProps {
   userName?: string;
   imgSrc?: string;
 }
 
 const Avatar = (props: AvatarProps) => {
-  const { className = "", userName = "", imgSrc = "" } = props;
+  const { userName = "", imgSrc = "" } = props;
   const [error, setError] = useState(false);
 
   return (
@@ -17,13 +16,13 @@ const Avatar = (props: AvatarProps) => {
         <img
           src={imgSrc}
           alt={`${userName}'s avatar`}
-          className={`othent-avatar ${className}`}
+          className="othent-avatar"
           {...props}
           referrerPolicy="no-referrer"
           onError={() => setError(true)}
         />
       ) : (
-        <div className={`othent-avatar ${className}`} {...props}>
+        <div className="othent-avatar">
           {userName ? userName.charAt(0).toUpperCase() : <>&nbsp;</>}
         </div>
       )}

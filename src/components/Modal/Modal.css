@@ -1,6 +1,24 @@
 @import url("../LoginButton/LoginButton.css");
 
 .othent-modal {
+  /* Copied from loginbutton */
+  appearance: none;
+  font-family: "DM Sans", sans-serif;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: black;
+  width: fit-content;
+  height: 3em;
+  padding: 0.25em 0.75em;
+  border: 0;
+  border-radius: 0.375em;
+  cursor: pointer;
+  filter: drop-shadow(1.5px 0.75px 0.125rem #0008);
+  font-weight: 700;
+  /*  */
   padding: 0;
   border: 0;
   width: 3em;

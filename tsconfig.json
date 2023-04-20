@@ -5,8 +5,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "jsx": "react", 
-    "module": "ESNext",  
+    "jsx": "react",
+    "module": "ESNext",
     "declaration": true,
     "declarationDir": "types",
     "sourceMap": true,
@@ -14,5 +14,6 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true
-  }
+  },
+  "exclude": ["dist/", "storybook/", "assets/"]
 }

@@ -23,8 +23,7 @@ enum ModalLocation {
   "bottom-left",
 }
 
-export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
+export interface ModalProps {
   parent?: React.ReactNode;
   children?: React.ReactNode;
   location?: ModalLocation;
@@ -32,7 +31,6 @@ export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Modal = (props: ModalProps) => {
   const {
-    className = "",
     parent = "Show Modal",
     children = "Modal Content",
     location = ModalLocation.bottom,
@@ -58,7 +56,7 @@ const Modal = (props: ModalProps) => {
 
   return (
     <div
-      className={`othent-login-button othent-modal ${className}`}
+      className="othent-login-button othent-modal"
       onClick={() => setShowModal(!showModal)}
       {...props}
     >

@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import "./LoginButton.css";
-import logo from "../assets/othent-logo.svg";
+import Logo from "../Logo";
 import othent from "othent/dist/lib";
 import { type LogInReturnProps } from "othent/dist/types";
 
-export interface LoginButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface LoginButtonProps {
   children?: React.ReactNode;
-  className?: string;
   onLogin?: (userData: LogInReturnProps) => void;
 }
 
 const LoginButton = (props: LoginButtonProps) => {
-  const { children, className = "", onLogin } = props;
+  const { children, onLogin } = props;
 
   const [clicked, setClicked] = useState(false);
 
@@ -31,12 +29,12 @@ const LoginButton = (props: LoginButtonProps) => {
 
   return (
     <button
-      className={`othent-button-login ${className}`}
+      className="othent-button-login"
       disabled={clicked}
       onClick={() => void login()}
       {...props}
     >
-      <img src={logo} alt="logo" className="othent-button-login-logo"></img>
+      <Logo />
       {children ? (
         children
       ) : (

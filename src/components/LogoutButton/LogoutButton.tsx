@@ -3,15 +3,13 @@ import "./LogoutButton.css";
 import othent from "othent/dist/lib";
 import { LogOutReturnProps } from "othent/dist/types";
 
-export interface LogoutButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface LogoutButtonProps {
   children?: React.ReactNode | string;
-  className?: string;
   onLogout?: (logoutResponse: LogOutReturnProps) => void;
 }
 
 const LogoutButton = (props: LogoutButtonProps) => {
-  const { children = "Log Out", className = "", onLogout } = props;
+  const { children = "Log Out", onLogout } = props;
 
   const [clicked, setClicked] = useState(false);
 
@@ -30,7 +28,7 @@ const LogoutButton = (props: LogoutButtonProps) => {
 
   return (
     <button
-      className={`othent-button-logout ${className}`}
+      className="othent-button-logout"
       disabled={clicked}
       onClick={() => void logout()}
       {...props}

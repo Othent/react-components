@@ -4,16 +4,18 @@ import {
   type LogOutReturnProps,
   type LogInReturnProps,
 } from "othent/dist/types";
-import { Avatar, LoginButton, LogoutButton, UserInfo, Modal } from "..";
+import Avatar from "../Avatar";
+import LoginButton from "../LoginButton";
+import LogoutButton from "../LogoutButton";
+import UserInfo from "../UserInfo";
+import Modal from "../Modal";
 
-export interface OthentLoginProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface OthentLoginProps {
   children?: React.ReactNode;
-  className?: string;
 }
 
 const OthentLogin = (props: OthentLoginProps) => {
-  const { children, className = "" } = props;
+  const { children } = props;
 
   const [userData, setUserData] = useState<LogInReturnProps | null>(null);
 
@@ -25,35 +27,27 @@ const OthentLogin = (props: OthentLoginProps) => {
     logoutResponse.response && setUserData(null);
   };
 
-  return userData === null ? (
-    <LoginButton
-      className={`othent-login ${className}`}
-      onLogin={onLogin}
-      {...props}
-    />
-  ) : (
-    <Modal
-      className={`othent-login ${className}`}
-      parent={
-        children ? (
-          children
-        ) : (
-          <Avatar
-            userName={userData.name}
-            imgSrc={userData.picture}
-            className={`othent-login ${className}`}
-          />
-        )
-      }
-    >
-      <div className={`othent-login othent-login-modal-children`}>
-        <UserInfo userData={userData} className={`othent-login ${className}`} />
-        <LogoutButton
-          onLogout={onLogout}
-          className={`othent-login ${className}`}
-        />
-      </div>
-    </Modal>
+  return (
+    <div className="othent-login">
+      {userData === null ? (
+        <LoginButton onLogin={onLogin} />
+      ) : (
+        <Modal
+          parent={
+            children ? (
+              children
+            ) : (
+              <Avatar userName={userData.name} imgSrc={userData.picture} />
+            )
+          }
+        >
+          <div className="othent-login othent-login-modal-children">
+            <UserInfo userData={userData} />
+            <LogoutButton onLogout={onLogout} />
+          </div>
+        </Modal>
+      )}
+    </div>
   );
 };
 

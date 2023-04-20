@@ -3,16 +3,15 @@ import "./UserInfo.css";
 import Avatar from "../Avatar";
 import { LogInReturnProps } from "othent/dist/types";
 
-export interface UserInfoProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
+export interface UserInfoProps {
   userData?: LogInReturnProps | null;
 }
 
 const UserInfo = (props: UserInfoProps) => {
-  const { className = "", userData: userInfo = null } = props;
+  const { userData: userInfo = null } = props;
 
   return (
-    <div className={`othent-user-info ${className}`} {...props}>
+    <div className="othent-user-info">
       <Avatar imgSrc={userInfo?.picture} userName={userInfo?.name} />
       <div className="othent-user-info-details">
         <div className="othent-user-info-details-name">{userInfo?.name}</div>

@@ -3,7 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import json from "@rollup/plugin-json";
-import svg from "rollup-plugin-svg";
 import dts from "rollup-plugin-dts";
 import PeerDepsExternalPlugin from "rollup-plugin-peer-deps-external";
 import terser from '@rollup/plugin-terser';
@@ -27,19 +26,19 @@ export default [
         ],
         plugins: [
             json(),
+            commonjs(),
             PeerDepsExternalPlugin(),
             resolve({ preferBuiltins: true }),
-            commonjs(),
-            svg(),
             typescript({ tsconfig: "./tsconfig.json" }),
             postcss(),
             terser(),
         ],
+        external: ["storybook/**", "react-dom", "assets", "othent"],
     },
     {
         input: "dist/esm/types/index.d.ts",
         output: [{ file: "dist/index.d.ts", format: "esm" }],
         plugins: [dts()],
-        external: ["storybook/**", "react-dom", "**/*.css", /\.css$/,],
+        external: ["storybook/**", "react-dom", "assets", /\.css$/,],
     },
 ];
