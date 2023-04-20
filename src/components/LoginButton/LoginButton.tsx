@@ -4,13 +4,14 @@ import Logo from "../Logo";
 import othent from "othent/dist/lib";
 import { type LogInReturnProps } from "othent/dist/types";
 
-export interface LoginButtonProps {
+export interface LoginButtonProps
+  extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
-  onLogin?: (userData: LogInReturnProps) => void;
+  onlogin?: (userData: LogInReturnProps) => void;
 }
 
 const LoginButton = (props: LoginButtonProps) => {
-  const { children, onLogin } = props;
+  const { children, onlogin } = props;
 
   const [clicked, setClicked] = useState(false);
 
@@ -18,7 +19,7 @@ const LoginButton = (props: LoginButtonProps) => {
     setClicked(true);
     try {
       const loginResponse = await othent.logIn();
-      if (onLogin) onLogin(loginResponse);
+      if (onlogin) onlogin(loginResponse);
     } catch (e) {
       console.log(`othent.login() failed:`);
       console.log(e);

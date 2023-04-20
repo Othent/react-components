@@ -11,7 +11,7 @@ import UserInfo from "../UserInfo";
 import Modal from "../Modal";
 import { ModalLocation } from "../Modal/Modal";
 
-export interface OthentLoginProps {
+export interface OthentLoginProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   location?: ModalLocation;
 }
@@ -32,7 +32,7 @@ const OthentLogin = (props: OthentLoginProps) => {
   return (
     <div className="othent-login">
       {userData === null ? (
-        <LoginButton onLogin={onLogin} />
+        <LoginButton onlogin={onLogin} />
       ) : (
         <Modal
           location={location}
@@ -40,13 +40,13 @@ const OthentLogin = (props: OthentLoginProps) => {
             children ? (
               children
             ) : (
-              <Avatar userName={userData.name} imgSrc={userData.picture} />
+              <Avatar username={userData.name} src={userData.picture} />
             )
           }
         >
           <div className="othent-login othent-login-modal-children">
-            <UserInfo userData={userData} />
-            <LogoutButton onLogout={onLogout} />
+            <UserInfo userdata={userData} />
+            <LogoutButton onlogout={onLogout} />
           </div>
         </Modal>
       )}

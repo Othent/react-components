@@ -23,7 +23,7 @@ export enum ModalLocation {
   "bottom-left",
 }
 
-export interface ModalProps {
+export interface ModalProps extends React.HTMLAttributes<HTMLDivElement> {
   parent?: React.ReactNode;
   children?: React.ReactNode;
   location?: ModalLocation;

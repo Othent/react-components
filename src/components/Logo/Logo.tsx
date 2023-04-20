@@ -1,7 +1,7 @@
 import React from "react";
 import "./Logo.css";
 
-export interface LogoProps {
+export interface LogoProps extends React.HTMLAttributes<HTMLOrSVGElement> {
   width?: number;
   height?: number;
 }
