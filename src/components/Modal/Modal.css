@@ -27,6 +27,7 @@
 }
 
 .othent-modal-children {
+  z-index: 10;
   position: absolute;
   padding: 1.5em;
   background-color: #fff;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./UserInfo.css";
 import Avatar from "../Avatar";
-import { LogInReturnProps } from "othent/dist/types";
+import { type LogInReturnProps } from "othent";
 
 export interface UserInfoProps extends React.HTMLAttributes<HTMLDivElement> {
   userdata?: LogInReturnProps | null;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./LogoutButton.css";
-import othent from "othent/dist/lib";
-import { LogOutReturnProps } from "othent/dist/types";
+import othent, { type LogOutReturnProps } from "othent";
 
 export interface LogoutButtonProps
   extends React.HTMLAttributes<HTMLButtonElement> {

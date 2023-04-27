@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import "./OthentLogin.css";
-import {
-  type LogOutReturnProps,
-  type LogInReturnProps,
-} from "othent/dist/types";
 import Avatar from "../Avatar";
 import LoginButton from "../LoginButton";
 import LogoutButton from "../LogoutButton";
 import UserInfo from "../UserInfo";
 import Modal from "../Modal";
 import { ModalLocation } from "../Modal/Modal";
+import { type LogOutReturnProps, type LogInReturnProps } from "othent";
 
 export interface OthentLoginProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;

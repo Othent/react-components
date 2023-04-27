@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./LoginButton.css";
 import Logo from "../Logo";
-import othent from "othent/dist/lib";
-import { type LogInReturnProps } from "othent/dist/types";
+import othent, { type LogInReturnProps } from "othent";
 
 export interface LoginButtonProps
   extends React.HTMLAttributes<HTMLButtonElement> {

@@ -1,6 +1,6 @@
 {
   "name": "@othent/react-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Othent React Components Library",
   "author": "@7i7o",
   "license": "MIT",
@@ -44,7 +44,7 @@
     "@storybook/react-webpack5": "^7.0.6",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.0.37",
-    "othent": "^1.0.36",
+    "othent": "^1.0.40",
     "postcss": "^8.4.22",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -59,7 +59,7 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "othent": "^1.0.36",
+    "othent": "^1.0.40",
     "react": "^18.2.0"
   }
 }
