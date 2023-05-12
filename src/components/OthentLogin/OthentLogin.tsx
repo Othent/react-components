@@ -11,10 +11,11 @@ import { type LogOutReturnProps, type LogInReturnProps } from "othent";
 export interface OthentLoginProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   location?: ModalLocation;
+  apiId: string;
 }
 
 const OthentLogin = (props: OthentLoginProps) => {
-  const { children, location = ModalLocation.bottom } = props;
+  const { children, location = ModalLocation.bottom, apiId } = props;
 
   const [userData, setUserData] = useState<LogInReturnProps | null>(null);
 
@@ -29,7 +30,7 @@ const OthentLogin = (props: OthentLoginProps) => {
   return (
     <div className="othent-login">
       {userData === null ? (
-        <LoginButton onlogin={onLogin} />
+        <LoginButton onlogin={onLogin} apiId={apiId} />
       ) : (
         <Modal
           location={location}
@@ -43,7 +44,7 @@ const OthentLogin = (props: OthentLoginProps) => {
         >
           <div className="othent-login othent-login-modal-children">
             <UserInfo userdata={userData} />
-            <LogoutButton onlogout={onLogout} />
+            <LogoutButton onlogout={onLogout} apiId={apiId} />
           </div>
         </Modal>
       )}

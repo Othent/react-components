@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import "./LoginButton.css";
 import Logo from "../Logo";
-import othent, { type LogInReturnProps } from "othent";
+import { Othent, type LogInReturnProps } from "othent";
 
 export interface LoginButtonProps
   extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   onlogin?: (userData: LogInReturnProps) => void;
+  apiId: string;
 }
 
 const LoginButton = (props: LoginButtonProps) => {
-  const { children, onlogin } = props;
+  const { children, onlogin, apiId } = props;
 
   const [clicked, setClicked] = useState(false);
 
   const login = async () => {
     setClicked(true);
     try {
+      const othent = await Othent({ API_ID: apiId });
       const loginResponse = await othent.logIn();
       if (onlogin) onlogin(loginResponse);
     } catch (e) {
