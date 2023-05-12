@@ -1,6 +1,6 @@
 {
   "name": "@othent/react-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Othent React Components Library",
   "author": "@7i7o",
   "license": "MIT",
@@ -62,6 +62,6 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "othent": "^1.0.57"
+    "othent": "^1.0.58"
   }
 }

@@ -7,18 +7,18 @@ export interface LoginButtonProps
   extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
   onlogin?: (userData: LogInReturnProps) => void;
-  apiId: string;
+  apiid: string;
 }
 
 const LoginButton = (props: LoginButtonProps) => {
-  const { children, onlogin, apiId } = props;
+  const { children, onlogin, apiid } = props;
 
   const [clicked, setClicked] = useState(false);
 
   const login = async () => {
     setClicked(true);
     try {
-      const othent = await Othent({ API_ID: apiId });
+      const othent = await Othent({ API_ID: apiid });
       const loginResponse = await othent.logIn();
       if (onlogin) onlogin(loginResponse);
     } catch (e) {

@@ -6,18 +6,18 @@ export interface LogoutButtonProps
   extends React.HTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode | string;
   onlogout?: (logoutResponse: LogOutReturnProps) => void;
-  apiId: string;
+  apiid: string;
 }
 
 const LogoutButton = (props: LogoutButtonProps) => {
-  const { children = "Log Out", onlogout, apiId } = props;
+  const { children = "Log Out", onlogout, apiid } = props;
 
   const [clicked, setClicked] = useState(false);
 
   const logout = async () => {
     setClicked(true);
     try {
-      const othent = await Othent({ API_ID: apiId });
+      const othent = await Othent({ API_ID: apiid });
       const logoutResponse = await othent.logOut();
       if (onlogout) onlogout(logoutResponse);
     } catch (e) {
