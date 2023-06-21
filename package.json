@@ -1,10 +1,9 @@
 {
   "name": "@othent/react-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Othent React Components Library",
   "author": "@7i7o",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist",
@@ -62,6 +61,6 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "othent": "^1.0.58"
+    "othent": "^1.0.632"
   }
 }

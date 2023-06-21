@@ -11,7 +11,7 @@ export interface LoginButtonProps
 }
 
 const LoginButton = (props: LoginButtonProps) => {
-  const { children, onlogin, apiid } = props;
+  const { children, onlogin, apiid, ...childProps } = props;
 
   const [clicked, setClicked] = useState(false);
 
@@ -34,7 +34,7 @@ const LoginButton = (props: LoginButtonProps) => {
       className="othent-button-login"
       disabled={clicked}
       onClick={() => void login()}
-      {...props}
+      {...childProps}
     >
       <Logo />
       {children ? (

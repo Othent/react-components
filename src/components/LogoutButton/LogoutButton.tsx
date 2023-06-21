@@ -10,7 +10,7 @@ export interface LogoutButtonProps
 }
 
 const LogoutButton = (props: LogoutButtonProps) => {
-  const { children = "Log Out", onlogout, apiid } = props;
+  const { children = "Log Out", onlogout, apiid, ...childProps } = props;
 
   const [clicked, setClicked] = useState(false);
 
@@ -33,7 +33,7 @@ const LogoutButton = (props: LogoutButtonProps) => {
       className="othent-button-logout"
       disabled={clicked}
       onClick={() => void logout()}
-      {...props}
+      {...childProps}
     >
       {children}
     </button>
