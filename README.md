@@ -1,3 +1,13 @@
+> [!WARNING]
+> 
+> **`@othent/react-components` has been deprecated.**
+>
+> Please, use the [`@othent/kms`](https://github.com/Othent/KeyManagementService) SDK to integrate Othent in your projects.
+>
+> You can read more about it at [docs.othent.io](https://docs.othent.io) and see it in action at [playground.othent.io](https://playground.othent.io/).
+
+----
+
 # Othent.io React Components Library
 
 ![OthentLogin component](assets/screenshots/othent-login.png)
